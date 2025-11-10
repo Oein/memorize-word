@@ -9,12 +9,7 @@ interface Props {
   onShowStats: () => void;
 }
 
-export default function Quiz({
-  memorizer,
-  selectedWords,
-  onBack,
-  onShowStats,
-}: Props) {
+export default function Quiz({ memorizer, onBack, onShowStats }: Props) {
   const [currentRound, setCurrentRound] = useState<IRound | null>(null);
   const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
   const [showResult, setShowResult] = useState(false);
